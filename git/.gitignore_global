@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor cruft
+.vscode/
+*.swp
+*.swo
+*~
+.idea/
+
+# Logs & temp files
+*.log
+*.tmp
+*.bak
+*.orig
+
+# Environment files — never commit secrets
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+node_modules/
+dist/
+build/
+

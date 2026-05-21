@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+._*
+
+# Editor
+.vscode/
+*.swp
+*~
+.claude/
+
+# Local-only notes and drafts
+.local/
