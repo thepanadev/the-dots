@@ -529,6 +529,13 @@
 make<span class="w"> </span>the-dots<span class="w">   </span><span class="c1"># interactive wizard — installs gum if needed</span>
 </code></pre></div>
 <p>The wizard reads targets directly from the Makefile and presents a menu. Every option is also runnable standalone via <code>make &lt;target&gt;</code>.</p>
+<p>To preview the docs locally:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install mkdocs once (uv recommended)</span>
+uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>--with<span class="w"> </span>mkdocs-material<span class="w"> </span>--with<span class="w"> </span>pymdown-extensions
+
+./scripts/docs/generate-all.sh
+mkdocs<span class="w"> </span>serve
+</code></pre></div>
 <h2 id="where-to-go-next">Where to go next<a class="headerlink" href="#where-to-go-next" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="reference/">Reference</a> — full Make target listing and script inventory</li>
