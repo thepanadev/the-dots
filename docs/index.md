@@ -26,6 +26,16 @@ make the-dots   # interactive wizard — installs gum if needed
 
 The wizard reads targets directly from the Makefile and presents a menu. Every option is also runnable standalone via `make <target>`.
 
+To preview the docs locally:
+
+```sh
+# Install mkdocs once (uv recommended)
+uv tool install mkdocs --with mkdocs-material --with pymdown-extensions
+
+./scripts/docs/generate-all.sh
+mkdocs serve
+```
+
 ## Where to go next
 
 - [Reference](reference/index.md) — full Make target listing and script inventory

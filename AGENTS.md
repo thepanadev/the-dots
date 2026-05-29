@@ -19,6 +19,7 @@ When this file and the spec appear to conflict, follow the spec for doctrinal ru
 The documentation source lives in `docs/`.
 
 Minimum expected files:
+
 - `docs/index.md`
 - `docs/reference/index.md`
 - `mkdocs.yml`
@@ -55,6 +56,7 @@ Use `curated` for pages maintained directly by editing prose.
 Use `derived` for pages generated from project artifacts.
 
 Derived pages:
+
 - are written only to `docs/reference/_generated/`
 - are not edited by hand
 - must include the standard generated-page warning admonition
@@ -108,6 +110,7 @@ If generated snippet targets do not exist, fix generation rather than removing s
 `generate-bash-docs.sh` has a `SCRIPT_PATTERNS` array near the top.
 
 Current configured patterns:
+
 - `scripts/*.sh`
 - `wizard.sh`
 
@@ -116,6 +119,7 @@ Adjust the array when scripts are added or removed, not by editing generated out
 ## MkDocs assumptions
 
 This repo uses MkDocs Material with:
+
 - `pymdownx.snippets` configured with `base_path: ["docs"]`
 - `pymdownx.snippets` configured with `check_paths: true`
 - Mermaid rendering configured through `pymdownx.superfences`
@@ -125,6 +129,7 @@ Because `check_paths: true` is enabled, missing generated files will fail the bu
 ## Editing rules for assistants
 
 Do:
+
 - preserve front matter
 - update curated pages when repo intent or workflow changes
 - regenerate derived pages when relevant source files change
@@ -132,6 +137,7 @@ Do:
 - keep `docs/index.md` short and accurate
 
 Do not:
+
 - edit files under `docs/reference/_generated/` by hand
 - regenerate and commit derived pages — CI runs generators on deploy; for local preview run `./scripts/docs/generate-all.sh` and leave output untracked
 - invent rationale not supported by the repo
@@ -140,7 +146,10 @@ Do not:
 ## First local docs path
 
 ```sh
-pip install mkdocs-material pymdown-extensions
+# Install mkdocs once (uv recommended)
+uv tool install mkdocs --with mkdocs-material --with pymdown-extensions
+# Alternative: pip3 install mkdocs-material pymdown-extensions
+
 ./scripts/docs/generate-all.sh
 mkdocs serve
 ```
@@ -148,6 +157,7 @@ mkdocs serve
 ## CI expectation
 
 The workflow at `.github/workflows/docs.yml` follows this order:
+
 1. install MkDocs dependencies
 2. run `./scripts/docs/generate-all.sh`
 3. publish with `mkdocs gh-deploy --force`
@@ -155,6 +165,7 @@ The workflow at `.github/workflows/docs.yml` follows this order:
 ## When to update documentation
 
 Update or regenerate docs when:
+
 - a Makefile target is added, removed, or renamed
 - a script in `scripts/` changes its purpose
 - `wizard.sh` behavior changes
