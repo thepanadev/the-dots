@@ -10,3 +10,7 @@
 
 # Local-only notes and drafts
 .local/
+
+# Docs — generated build artifacts
+docs/reference/_generated/
+site/

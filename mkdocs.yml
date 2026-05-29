@@ -1,0 +1,44 @@
+site_name: the-dots
+site_description: Personal macOS dotfiles and environment setup
+site_url: https://thepanadev.github.io/the-dots/
+repo_url: https://github.com/thepanadev/the-dots
+repo_name: thepanadev/the-dots
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: ["docs"]
+      check_paths: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Reference:
+      - reference/index.md
