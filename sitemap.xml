@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://thepanadev.github.io/the-dots/</loc>
+         <lastmod>2026-05-29</lastmod>
+    </url>
+    <url>
+         <loc>https://thepanadev.github.io/the-dots/reference/</loc>
+         <lastmod>2026-05-29</lastmod>
+    </url>
+    <url>
+         <loc>https://thepanadev.github.io/the-dots/reference/_generated/bash-scripts/</loc>
+         <lastmod>2026-05-29</lastmod>
+    </url>
+    <url>
+         <loc>https://thepanadev.github.io/the-dots/reference/_generated/make-targets/</loc>
+         <lastmod>2026-05-29</lastmod>
+    </url>
+</urlset>

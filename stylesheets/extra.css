@@ -1,0 +1,21 @@
+:root {
+  --docs-max-width: 72rem;
+}
+
+.md-grid {
+  max-width: var(--docs-max-width);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: -0.01em;
+}
+
+.md-typeset blockquote {
+  border-left-width: 0.2rem;
+}
+
+.md-typeset .admonition {
+  font-size: 0.95rem;
+}
